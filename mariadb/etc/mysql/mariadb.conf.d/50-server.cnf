@@ -1,0 +1,15 @@
+bind-address            = 127.0.0.1
+
+lower_case_table_names  = 1
+
+skip-character-set-client-handshake
+
+skip-log-bin
+
+skip_name_resolve
+
+max_connections         = 1000
+
+innodb_buffer_pool_size = 384M
+
+max_allowed_packet      = 16M
