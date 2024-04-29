@@ -1,0 +1,24 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# VSCode
+.vscode/
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
+out/
+
+# Vim
+.*.sw[a-p]
+
+# Mac filesystem
+.DS_Store/
+.DS_Store
+
+# Linux temp files
+*~
