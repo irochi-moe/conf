@@ -1,7 +1,6 @@
 irochi.moe {
     tls /etc/ssl/cloudflare.irochi.moe.fullchain.pem /etc/ssl/cloudflare.irochi.moe.privkey.pem
     root * /var/www/irochi.moe/public
-    php_fastcgi unix//run/php/php8.3-fpm.sock
 
     redir /files /files/
 
