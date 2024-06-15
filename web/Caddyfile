@@ -1,7 +1,3 @@
-:80 {
-    abort
-}
-
 irochi.moe {
     tls /etc/ssl/cloudflare.irochi.moe.fullchain.pem /etc/ssl/cloudflare.irochi.moe.privkey.pem
     root * /var/www/irochi.moe/public
