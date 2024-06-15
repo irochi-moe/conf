@@ -1,0 +1,11 @@
+sudo chmod 777 -R /var/www/irochi.moe/pterodactyl/
+sudo chmod 755 -R /var/www/irochi.moe/pterodactyl/
+sudo chown -R www-data /var/www/irochi.moe/pterodactyl/
+
+cd /var/www/irochi.moe/pterodactyl/
+
+export NODE_OPTIONS=--openssl-legacy-provider
+yarn build:production
+php artisan view:clear & php artisan config:clear
+
+grep -r 'keyword' resources/
