@@ -1,0 +1,31 @@
+:80 {
+    abort
+}
+
+irochi.moe {
+    tls /etc/ssl/cloudflare.irochi.moe.fullchain.pem /etc/ssl/cloudflare.irochi.moe.privkey.pem
+    root * /var/www/irochi.moe/public
+    php_fastcgi unix//run/php/php8.3-fpm.sock
+
+    redir /files /files/
+
+    handle /_h5ai/private/* {
+        respond 404
+    }
+
+    handle /files/* {
+        php_fastcgi unix//run/php/php8.3-fpm.sock
+
+        @no_index not file {path}.html {path} {path}/index.html
+        rewrite @no_index /_h5ai/public/index.php
+
+        file_server
+    }
+
+    handle_errors {
+        rewrite * error.html
+        file_server
+    }
+
+    file_server
+}
