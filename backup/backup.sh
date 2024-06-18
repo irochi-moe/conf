@@ -8,7 +8,7 @@ DATE=$(date +%Y%m%d)
 OUTPUT="$BASE_OUTPUT/$DATE"
 
 # Cloudflare R2 Bucket Name
-R2_BUCKET="mcpanel-irochi-moe/mysql"
+R2_BUCKET="BUCKET"
 
 # Ensure output directory exists
 if [ ! -d "$OUTPUT" ]; then
