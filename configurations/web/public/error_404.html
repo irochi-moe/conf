@@ -48,9 +48,11 @@
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         const messages = [
-          "Bad Irochi. Since this is likely a server issue.",
-          "Maybe try going back to the homepage.",
-          "Something went wrong."
+          "Looks like this page is taking a break.",
+          "Please check the URL and try again.",
+          "The page you are looking for cannot be found.",
+          "This page fell out of the world.",
+          "The page blew up."
         ];
         const randomMessage = messages[Math.floor(Math.random() * messages.length)];
         document.getElementById("random-message").innerHTML = randomMessage;
@@ -61,7 +63,7 @@
     <div class="error-container">
       <div class="sad-face">:(</div>
       <div class="error-message">irochi.moe ran into a problem and needs to go back. <br><span id="random-message"></span></div>
-      <div class="error-details">If you'd like to know more, you can search online later for this error: 50X_SERVER_ERROR</div>
+      <div class="error-details">If you'd like to know more, you can search online later for this error: 404_NOT_FOUND</div>
     </div>
   </body>
 </html>
